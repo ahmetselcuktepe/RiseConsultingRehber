@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Rehber.Entities
 {
-   public class RehberDetail
+   public class RehberKDetail
     {
         [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int İd { get; set; }

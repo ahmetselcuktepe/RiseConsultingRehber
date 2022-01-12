@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Rehber.Entities
 {
-    public class Rehber
+    public class RehberK
     {
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
