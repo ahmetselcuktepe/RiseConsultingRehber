@@ -2,41 +2,60 @@
 using Rehber.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Rehber.DataAccess.Concrete
 {
     class RehberDetailRepository : IRehberKDetailRepository
     {
-        public RehberKDetail CreateRehberK(RehberKDetail rehberDetailK)
+        public RehberKDetail CreateRehberKDetail(RehberKDetail rehberKDetail)
         {
             using (var RehberDBContext = new RehberDBContext())
             {
-                RehberDBContext.RehberKDetails.Add(rehberDetailK);
+                RehberDBContext.RehberKDetails.Add(rehberKDetail);
                 RehberDBContext.SaveChanges();
-                return rehberDetailK;
+                return rehberKDetail;
 
             }
         }
 
-        public void DeleteHotel(Guid guid)
+        public void DeleteRehberKDetail(Guid guid)
         {
-            throw new NotImplementedException();
+            using (var RehberDBContext = new RehberDBContext())
+            {
+                var RehberDetailDelete = GetRehberKDetailByGuid(guid);
+                RehberDBContext.RehberKDetails.Remove(RehberDetailDelete);
+                RehberDBContext.SaveChanges();
+
+            }
         }
 
-        public List<RehberKDetail> GetAllRehberKs()
+        public List<RehberKDetail> GetAllRehberKDetails()
         {
-            throw new NotImplementedException();
+            using (var RehberDBContext = new RehberDBContext())
+            {
+                return RehberDBContext.RehberKDetails.ToList();
+            }
         }
 
-        public RehberKDetail GetRehberKByGuid(Guid guid)
+        public RehberKDetail GetRehberKDetailByGuid(Guid guid)
         {
-            throw new NotImplementedException();
+            using (var RehberDBContext = new RehberDBContext())
+            {
+                return RehberDBContext.RehberKDetails.Find(guid);
+            }
         }
 
-        public RehberKDetail UptadeRehberK(RehberKDetail rehberDetailK)
+        public RehberKDetail UptadeRehberKDetail(RehberKDetail rehberKDetail)
         {
-            throw new NotImplementedException();
+            using (var RehberDBContext = new RehberDBContext())
+            {
+                RehberDBContext.RehberKDetails.Update(rehberKDetail);
+                RehberDBContext.SaveChanges();
+                return rehberKDetail;
+
+            }
         }
     }
 }

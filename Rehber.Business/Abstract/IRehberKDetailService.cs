@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Rehber.DataAccess.Abstract
+namespace Rehber.Business.Abstract
 {
-    public interface IRehberKDetailRepository
+   public interface IRehberKDetailService
     {
         List<RehberKDetail> GetAllRehberKDetails();
 
@@ -16,7 +16,6 @@ namespace Rehber.DataAccess.Abstract
         RehberKDetail UptadeRehberKDetail(RehberKDetail rehberKDetail);
 
         void DeleteRehberKDetail(Guid guid);
-
 
     }
 }

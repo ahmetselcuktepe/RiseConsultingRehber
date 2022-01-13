@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rehber.Entities", "Rehber.Entities\Rehber.Entities.csproj", "{B3375041-EF1A-4C00-9F37-F76BE80EE37D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rehber.Entities", "Rehber.Entities\Rehber.Entities.csproj", "{B3375041-EF1A-4C00-9F37-F76BE80EE37D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rehber.DataAccess", "Rehber.DataAccess\Rehber.DataAccess.csproj", "{B6BC9D80-FA85-443F-A730-9B6B31EA08D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rehber.DataAccess", "Rehber.DataAccess\Rehber.DataAccess.csproj", "{B6BC9D80-FA85-443F-A730-9B6B31EA08D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rehber.Business", "Rehber.Business\Rehber.Business.csproj", "{D17B238E-5380-49F6-9758-861A7B7F3F01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B6BC9D80-FA85-443F-A730-9B6B31EA08D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6BC9D80-FA85-443F-A730-9B6B31EA08D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6BC9D80-FA85-443F-A730-9B6B31EA08D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17B238E-5380-49F6-9758-861A7B7F3F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17B238E-5380-49F6-9758-861A7B7F3F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17B238E-5380-49F6-9758-861A7B7F3F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17B238E-5380-49F6-9758-861A7B7F3F01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
