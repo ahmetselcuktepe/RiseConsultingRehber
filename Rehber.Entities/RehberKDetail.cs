@@ -6,10 +6,10 @@ using System.Text;
 
 namespace Rehber.Entities
 {
-   public class RehberKDetail
+   public class RehberKDetail 
     {
         [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int İd { get; set; }
+        public int Id { get; set; }
         [StringLength(50)]
         public string Key { get; set; }
         [StringLength(50)]
@@ -18,5 +18,7 @@ namespace Rehber.Entities
         public string KisiId { get; set; }
 
         public bool Kaldirma { get; set; }
+
+        public RehberK RehberK { get; set; }
     }
 }

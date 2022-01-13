@@ -26,5 +26,11 @@ namespace Rehber.API.Controllers
         {
             return _rehberService.GetAllRehberKs();
         }
+
+        [HttpGet("{guid}")]
+        public RehberK Get(Guid guid)
+        {
+            return _rehberService.GetRehberKByGuid(guid);
+        }
     }
 }
