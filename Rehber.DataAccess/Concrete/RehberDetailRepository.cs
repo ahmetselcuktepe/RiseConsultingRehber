@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Rehber.DataAccess.Concrete
 {
-    class RehberDetailRepository : IRehberKDetailRepository
+   public class RehberDetailRepository : IRehberKDetailRepository
     {
         public RehberKDetail CreateRehberKDetail(RehberKDetail rehberKDetail)
         {

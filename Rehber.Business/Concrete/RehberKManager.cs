@@ -23,22 +23,22 @@ namespace Rehber.Business.Concrete
 
         public void DeleteRehberK(Guid guid)
         {
-            throw new NotImplementedException();
+            _rehberKRepository.DeleteRehberK(guid);
         }
 
         public List<RehberK> GetAllRehberKs()
         {
-            throw new NotImplementedException();
+            return _rehberKRepository.GetAllRehberKs();
         }
 
         public RehberK GetRehberKByGuid(Guid guid)
         {
-            throw new NotImplementedException();
+            return _rehberKRepository.GetRehberKByGuid(guid);
         }
 
         public RehberK UptadeRehberK(RehberK rehberK)
         {
-            throw new NotImplementedException();
+            return _rehberKRepository.UptadeRehberK(rehberK);
         }
     }
 }
