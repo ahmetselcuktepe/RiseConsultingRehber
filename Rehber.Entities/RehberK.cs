@@ -13,6 +13,7 @@ namespace Rehber.Entities
         public Guid Id { get; set; }
 
         [StringLength(50)]
+        [Required]
         public string Ad { get; set; }
 
         [StringLength(50)]

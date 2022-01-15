@@ -2,12 +2,13 @@
 using Rehber.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
 namespace Rehber.DataAccess
 {
-    public class RehberDBContext:DbContext
+    public class RehberDBContext : DbContext
     {
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -18,5 +19,6 @@ namespace Rehber.DataAccess
 
         public DbSet<RehberK> RehberKs { get; set; }
         public DbSet<RehberKDetail> RehberKDetails { get; set; }
+
     }
 }

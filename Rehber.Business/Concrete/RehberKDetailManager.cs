@@ -13,9 +13,9 @@ namespace Rehber.Business.Concrete
     {
         private IRehberKDetailRepository _rehberKDetailRepository;
 
-        public RehberKDetailManager()
+        public RehberKDetailManager(IRehberKDetailRepository rehberKDetailRepository)
         {
-            _rehberKDetailRepository = new RehberDetailRepository();
+            _rehberKDetailRepository = rehberKDetailRepository;
 
         }
         public RehberKDetail CreateRehberKDetail(RehberKDetail rehberKDetail)

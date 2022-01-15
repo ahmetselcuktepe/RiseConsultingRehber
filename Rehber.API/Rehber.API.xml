@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rehber.API</name>
+    </assembly>
+    <members>
+        <member name="M:Rehber.API.Controllers.RehberController.Get">
+            <summary>
+            Telefondaki kayıtlı tüm kişileri göstermektedir.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

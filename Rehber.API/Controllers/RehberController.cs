@@ -16,21 +16,60 @@ namespace Rehber.API.Controllers
     {
         private IRehberKService _rehberService;
 
-        public RehberController()
+        public RehberController(IRehberKService rehberKService)
         {
-            _rehberService = new RehberKManager();
+            _rehberService = rehberKService;
         }
-
+        /// <summary>
+        /// Telefondaki kayıtlı tüm kişileri göstermektedir.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        public List<RehberK> Get()
+        public IActionResult Get()
         {
-            return _rehberService.GetAllRehberKs();
+            var Rehber = _rehberService.GetAllRehberKs();
+            return Ok(Rehber);
         }
 
         [HttpGet("{guid}")]
-        public RehberK Get(Guid guid)
+        public IActionResult Get(Guid guid)
         {
-            return _rehberService.GetRehberKByGuid(guid);
+            var Rehber = _rehberService.GetRehberKByGuid(guid);
+            if (Rehber != null)
+            {
+                return Ok(Rehber);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] RehberK rehber)
+        {
+            var Rehber = _rehberService.CreateRehberK(rehber);
+            return CreatedAtAction("Get", new { Guid = Rehber.Id }, Rehber);
+        }
+
+        [HttpPut]
+        public IActionResult Put([FromBody] RehberK rehber)
+        {
+            if (_rehberService.GetRehberKByGuid(rehber.Id)!=null)
+            {
+                var Rehber = _rehberService.UptadeRehberK(rehber);
+                return Ok(Rehber);
+            }
+            return NotFound();
+        }
+
+        [HttpDelete("{guid}")]
+        public IActionResult Delete(Guid guid)
+        {
+            if (_rehberService.GetRehberKByGuid(guid) != null)
+            {
+                 _rehberService.DeleteRehberK(guid);
+                return Ok();
+            }
+            return NotFound();
+            
         }
     }
 }

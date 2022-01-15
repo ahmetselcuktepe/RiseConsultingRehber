@@ -17,9 +17,9 @@ namespace Rehber.API.Controllers
 
         private IRehberKDetailService _rehberDetailService;
 
-        public RehberDetailController()
+        public RehberDetailController(IRehberKDetailService rehberKDetailService)
         {
-            _rehberDetailService = new RehberKDetailManager();
+            _rehberDetailService = rehberKDetailService;
         }
 
         [HttpGet]

@@ -12,9 +12,9 @@ namespace Rehber.Business.Concrete
     {
         private IRehberKRepository _rehberKRepository;
 
-        public RehberKManager()
+        public RehberKManager(IRehberKRepository rehberKRepository)
         {
-            _rehberKRepository = new RehberKRepository();
+            _rehberKRepository = rehberKRepository;
         }
         public RehberK CreateRehberK(RehberK rehberK)
         {
